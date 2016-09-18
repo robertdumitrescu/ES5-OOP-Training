@@ -1,0 +1,32 @@
+{
+  "name": "test111",
+  "version": "1.0.0",
+  "description": "# Back-end logging system",
+  "main": "index.js",
+  "scripts": {
+    "install-prod": "npm install --production",
+    "test": "mocha \"tests/mochaTestsWrapper.js\" --full-trace",
+    "test-coverage": "istanbul cover _mocha \"tests/mochaTestsWrapper.js\" --config=istanbul.json --full-trace",
+    "docs": "node_modules/.bin/jsdoc -c jsdoc.json",
+    "all-dev": "npm run docs && npm run test",
+    "db-dump": "mysqldump --databases --user=root --password=root as > sql/dump.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertdumitrescu/BELS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertdumitrescu/BELS/issues"
+  },
+  "homepage": "https://github.com/robertdumitrescu/BELS#readme",
+  "dependencies": {
+    "asyncawait": "^1.0.6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "docdash": "^0.4.0",
+    "jsdoc": "^3.4.0"
+  }
+}
